@@ -1,12 +1,14 @@
 import Header from "@/components/Header";
-import styled from "styled-components";
-
+import Search from "@/components/Search";
+import LatestReleases from "@/components/latestReleases";
 
 export default function Home() {
   return (
-  <>
-  <Header />
-   
-  </>
+    <>
+      <Header />
+      <Search />
+      <LatestReleases />
+      
+    </>
   );
 }
