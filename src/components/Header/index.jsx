@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Logo from "../Logo";
 
 const HeaderContainer = styled.header`
-background-color: #FFF;
-    display: flex;
-    justify-content: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
 `;
 const Opcao = styled.li`
   margin: 0 10px;
@@ -12,7 +12,6 @@ const Opcao = styled.li`
   list-style: none;
   cursor: pointer;
   font-size: 1.2rem;
-
 `;
 
 const Opcoes = styled.ul`
@@ -24,17 +23,16 @@ const Opcoes = styled.ul`
   gap: 10px;
 `;
 
-
-
-const textoOpcoes = ['Categoria', 'Favoritos', 'Carrinho']
+const textoOpcoes = ["Categoria", "Favoritos", "Carrinho"];
 export default function Header() {
   return (
     <HeaderContainer>
       <Logo />
       <Opcoes>
-      <Opcao>{textoOpcoes}</Opcao>
+        {textoOpcoes.map((texto, index) => (
+          <Opcao key={index}>{texto}</Opcao>
+        ))}
       </Opcoes>
     </HeaderContainer>
   );
 }
- 
